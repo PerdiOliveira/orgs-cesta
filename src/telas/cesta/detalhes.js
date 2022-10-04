@@ -2,14 +2,7 @@ import React from "react";
 import { StyleSheet, Image, View } from "react-native";
 import StyledText from "../../components/StyledText";
 
-const Detalhes = ({
-  nome,
-  nomeCesta,
-  nomeProdutor,
-  logo,
-  descricao,
-  preco,
-}) => {
+const Detalhes = ({ nomeCesta, nomeProdutor, logo, descricao, preco }) => {
   return (
     <>
       <StyledText style={estilos.nomeCesta}>{nomeCesta}</StyledText>

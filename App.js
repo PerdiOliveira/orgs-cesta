@@ -1,5 +1,5 @@
 /* eslint-disable react/style-prop-object */
-import { StatusBar, SafeAreaView, View } from "react-native";
+import { StatusBar, SafeAreaView } from "react-native";
 import Cesta from "./src/telas/cesta/index";
 import {
   useFonts,
@@ -7,6 +7,7 @@ import {
   Montserrat_700Bold,
 } from "@expo-google-fonts/montserrat";
 import mock from "./src/mocks/cesta";
+import AppLoading from "expo-app-loading";
 
 export default function App() {
   const [fonteCarregada] = useFonts({
@@ -15,7 +16,7 @@ export default function App() {
   });
 
   if (!fonteCarregada) {
-    return <View />;
+    return <AppLoading />;
   }
   return (
     <SafeAreaView>
