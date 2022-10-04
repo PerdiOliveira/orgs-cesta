@@ -1,5 +1,4 @@
 /* eslint-disable react/style-prop-object */
-
 import { StatusBar, SafeAreaView, View } from "react-native";
 import Cesta from "./src/telas/Cesta";
 import {
@@ -7,6 +6,7 @@ import {
   Montserrat_400Regular,
   Montserrat_700Bold,
 } from "@expo-google-fonts/montserrat";
+import mock from "./src/mocks/cesta";
 
 export default function App() {
   const [fonteCarregada] = useFonts({
@@ -19,7 +19,7 @@ export default function App() {
   }
   return (
     <SafeAreaView>
-      <Cesta></Cesta>
+      <Cesta {...mock} />
       <StatusBar style="auto" />
     </SafeAreaView>
   );

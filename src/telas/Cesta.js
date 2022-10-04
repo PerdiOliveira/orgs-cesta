@@ -1,25 +1,25 @@
 import React from "react";
 import { Dimensions, Image, StyleSheet, View } from "react-native";
-import topo from "../../assets/topo.png";
-import logo from "../../assets/logo.png";
 import StyledText from "../components/StyledText";
 
 const width = Dimensions.get("screen").width;
 
-export default function Cesta() {
+export default function Cesta({ topo, detalhes }) {
   return (
     <>
-      <Image source={topo} style={estilos.topo} />
-      <StyledText style={estilos.titulo}>Detalhes da Cesta</StyledText>
+      <Image source={topo.imagemTopo} style={estilos.topo} />
+      <StyledText style={estilos.titulo}>{topo.titulo}</StyledText>
       <View style={estilos.cesta}>
-        <StyledText style={estilos.nome}>Nome da Cesta</StyledText>
+        <StyledText style={estilos.nome}>{detalhes.nomeCesta}</StyledText>
         <View style={estilos.produtor}>
-          <Image style={estilos.logo} source={logo} />
-          <StyledText style={estilos.nomeProdutor}>Nome do produtor</StyledText>
+          <Image style={estilos.logo} source={detalhes.logo} />
+          <StyledText style={estilos.nomeProdutor}>
+            {detalhes.nomeProdutor}
+          </StyledText>
         </View>
 
-        <StyledText style={estilos.descricao}>Descrição</StyledText>
-        <StyledText style={estilos.preco}>Preço</StyledText>
+        <StyledText style={estilos.descricao}>{detalhes.descricao}</StyledText>
+        <StyledText style={estilos.preco}>{detalhes.preco}</StyledText>
       </View>
     </>
   );
