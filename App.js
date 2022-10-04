@@ -1,6 +1,6 @@
 /* eslint-disable react/style-prop-object */
 import { StatusBar, SafeAreaView, View } from "react-native";
-import Cesta from "./src/telas/Cesta";
+import Cesta from "./src/telas/cesta/index";
 import {
   useFonts,
   Montserrat_400Regular,
