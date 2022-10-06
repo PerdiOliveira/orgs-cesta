@@ -1,6 +1,6 @@
 /* eslint-disable react/style-prop-object */
 import { StatusBar, SafeAreaView } from "react-native";
-import Cesta from "./src/telas/cesta/index";
+import Cesta from "./src/telas/index";
 import {
   useFonts,
   Montserrat_400Regular,
@@ -19,7 +19,7 @@ export default function App() {
     return <AppLoading />;
   }
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
       <Cesta {...mock} />
       <StatusBar style="auto" />
     </SafeAreaView>
