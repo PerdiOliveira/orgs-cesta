@@ -2,7 +2,7 @@ import React from "react";
 import StyledText from "../../components/StyledText";
 import { StyleSheet, Image, View } from "react-native";
 
-const ListaItens = ({ item: { imagem, nome, titulo } }) => {
+const ListaItens = ({ item: { imagem, nome } }) => {
   return (
     <>
       <View key={nome} style={estilos.lista}>
