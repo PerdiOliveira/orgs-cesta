@@ -16,7 +16,7 @@ export default StyledButton;
 
 const estilos = StyleSheet.create({
   botao: {
-    paddingVertical: 26,
+    paddingVertical: 16,
     marginTop: 16,
     backgroundColor: "#2A9F85",
     borderRadius: 20,
@@ -26,5 +26,6 @@ const estilos = StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
     fontSize: 16,
+    lineHeight: 26,
   },
 });
